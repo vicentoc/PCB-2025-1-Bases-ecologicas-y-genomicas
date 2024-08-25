@@ -7,7 +7,7 @@ Bases ecológicas y genómicas de la interacción organismo - ambiente.
 
 Algunas definiciones de nicho:
 
-Grinell (1917): El nicho ecológico de una especie se puede definir como la combinación de condiciones ecológicas que permiten mantener la población sin inmigración.
+Grinell (1917): El nicho ecológico de una especie se puede definir como la combinación de condiciones ecológicas que permiten mantener a una población sin inmigración.
 
 George Hutchinson: lo define como la suma de
 todos los factores ambientales que actúan sobre un organismo.
@@ -37,13 +37,13 @@ Como se distribuyen en el espacio geográfico algunos de los principales biomas 
 
 ![Distribución geográfica de biomas](ecosystem_in_geographical_space.png "Distribución geográfica de biomas")
 
-Como se distribuyen esos mismos biomas en el espacio ambiental con base en los dos primeros componentes de un análisis de un PCA.
+Como se distribuyen esos mismos biomas en el espacio ambiental con base en los dos primeros componentes de un análisis de PCA.
 
 ![](ecosystems_ecological_space.png)
 
 **Práctica 2.1.** \
 Haz un ejercicio similar para una región de tu interés.\
-**Nota:** Los materiales necesarios para replicar las imagenes de los biomas de américa en el espacio geográfico y ecológico se encuentran en esta misma unidad en la carpeta biomas_de_america_r. 
+**Nota:** Los materiales necesarios para replicar las imagenes de los biomas de américa en el espacio geográfico y ecológico se encuentran en esta misma unidad en la carpeta modelos_de_nicho_en_r. 
 
 ### Modelos de nicho ecológico
 
