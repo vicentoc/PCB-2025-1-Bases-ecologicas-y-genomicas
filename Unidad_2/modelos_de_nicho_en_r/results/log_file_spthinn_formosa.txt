@@ -1,0 +1,20 @@
+********************************************** 
+ Beginning Spatial Thinning.
+ Script Started at: Sun Aug 25 14:12:57 2024
+
+Thinning Parameter Used (in km): 20
+Number of replicates of thinning script: 1
+
+Elapsed time for thinning completion
+0.05 0.1 0.21 NA NA
+
+Number of data.frames per locations retained
+loc.cnt df.freq
+202
+1
+Maximum number of records after thinning: 202
+Number of data.frames with max records: 1
+
+**New *.csv file creation:**
+Writing new *.csv files to output directory: results/
+Writing file: results/formosa_20km_thin1.csv

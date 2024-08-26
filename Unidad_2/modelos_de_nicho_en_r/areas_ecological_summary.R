@@ -1,35 +1,67 @@
+
+# Load libraries
 library(rgdal)
 library(raster)
 
-getwd()
-# "E:/data_archive_chapter5/community/"
 
+setwd ("C:\\Users\\vicen\\OneDrive\\Escritorio\\pcb_curso_2025-1_bases_ecologicas_y_genomicas\\PCB-2025-1-Bases-ecologicas-y-genomicas\\Unidad_2\\modelos_de_nicho_en_r")
+
+# Ecoregions from Dynerstein et al., 2017
 shapes_names <- c("tropical_coniferous_forest",
                   "temperate_coniferous_forest",
                   "yp_dryforest",
                   "montane_grassland_sa",
                   "temperate_mixed_forest_2",
-                  #"tropical_dryforest",
                   "moistforest_ca2", #sa
                   "moistforest_antillas",
                   "moistforest_yp",
                   "moistforest_ca1",
-                  #"tundra",
                   "dryforest_ca",
                   "dryforest_sa",
                   "dryforest_antillas")
-                  
 
+# Breve guía por algunos comandos útiles             
+# For loop cuando hay que hacer lo mismo para diferentes objetos. 
+# Es amigo del copy - paste.
+
+#Ejemplos
+for (i in 1:10) {
+print(i)  
+print(paste("Esta es la repeticion", i))  
+}
+
+# Nested for loop
+# For loop cuando hay que hacer una serie de operaciones para diferentes objetos
+#Ejemplos
+for (i in 1:10) {
+  for (j in 1:3) {
+  print(i)  
+  print(paste("Esta es la repeticion", j)) 
+}
+}
+
+
+# Read and assign name to the shape files.
 for (i in seq_along(shapes_names)) { 
 shape_ecos <- readOGR(dsn=path.expand("shapes_figura/"),
         layer=paste0(shapes_names[i]))
+plot(shape_ecos)
 assign(paste0(shapes_names[i]), shape_ecos)
 print(paste0(shapes_names[i]))
 }
 
+#make a stack with the 19 bioclimatic variables and altitude layer
+#wlclim_bios <-list.files(path="D:/SDM_tools/capas_bios_25/bio_2-5m_bil", pattern = ".bil$", full.names=TRUE)
+#saveRDS(wlclim_bios,  file = "wlclim_bios.RDS")
+ 
+wlclim_bios <- readRDS("wlclim_bios.RDS")
+wlclim_stack <-raster::subset(wlclim_bios, c(5,6,10, 13,15,16))
 
-# stack each
-pres.stack.ecos_list <-  pres.stack.ecos
+# NOTA Checar los objetos es una buena práctica!
+wlclim_stack
+
+# Make an stack for each biome
+CRS.new<-CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")  
 for (i in seq_along(shapes_names)) {
   for (j in seq_along(1:6)) {
   shape_get <- get(shapes_names[i]) 
@@ -44,15 +76,17 @@ for (i in seq_along(shapes_names)) {
   }
   if (j == 6) {
   assign(paste0(shapes_names[i], "_stack"), add_layer)
-    print(paste("chido", i))
+    print(paste("Este es el bioma ", shapes_names[i]))
+    get_biome <- get(paste0(shapes_names[i], "_stack"))
+    plot(get_biome)
   } else { 
-    print("chale")
+    print("cargando capas")
      }
   }}
 
+# Objects from the for loop
 plot(moistforest_ca1_stack[[1]])
 plot(moistforest_yp_stack[[1]])
-plot(tundra_stack[[1]])
 
 # Extract values
 extract.area_table <- c()
@@ -80,11 +114,8 @@ assign(paste0(shapes_names[i], "_extract"), extract.area_table)
 
 # objects
 paste0(shapes_names[i], "_extract")
-#tropical_coniferous_forest_extract
-#moistforest_ca1_extract
-#temperate_mixed_forest_2_extract
-#tropical_dryforest_extract
-
+#dryforest_antillas_extract
+get(paste0(shapes_names[i], "_extract"))
 
 # Merge tables
 for (i in seq_along(shapes_names)) { 
@@ -104,13 +135,8 @@ assign(paste0(shapes_names[i], "_extract_table"), random_coordinates)
 }}
 
 # Objects
-#moistforest_ca1_extract_table
-#temperate_mixed_forest_2_extract_table
-#tropical_dryforest_extract_table
-#tropical_coniferous_forest_extract_table
 yp_dryforest_extract_table
 moistforest_yp_extract_table
-
 
 # Merge all tables
 table_ecos <- c()
@@ -124,11 +150,36 @@ table_ecos <- rbind(table_ecos, extract_table)
 }
 
 # Table master
-# table_ecos 
+table_ecos
+
+# FIGURE plot
+library(factoextra)
 library(ggfortify)
 library(ggplot2)
-# FIGURE 2
+
+names_ecosystems <- c(
+  "Dry-forest Antilles",
+  "Dry-forest Central-America",
+  "Dry-forest South-America",
+  
+  "Moist-forest Antilles",
+  "Moist-forest Central-America",
+  "Moist-forest South-America",
+  "Moist-forest Yucatan Peninsula",
+  
+  "Montane grassland South-America",
+  "Temperate coniferous forest",
+  "Temperate mixed forest",
+  "Tropical coniferous forest",
+  "Dry-forest Yucatan Peninsula")
+
 pca_areas <- prcomp(table_ecos[ ,c(3:8)], scale = TRUE)
+
+summary(pca_areas)
+pca_areas$rotation
+
+# Show the percentage of variances explained by each principal component.
+ fviz_eig(pca_areas)
 
 iriscolors<-setNames(c("darkgreen","green4","green3",
                        "orange", "yellow3",
@@ -147,18 +198,6 @@ bp <- ggplot(pca_areas$x) +
 
 bp 
 
-names_ecosystems <- c(
-"Dry-forest Antilles",
-"Dry-forest Central-America",
-"Dry-forest South-America",
-
-"Moist-forest Antilles",
-"Moist-forest Central-America",
-"Moist-forest South-America",
-"Moist-forest Yucatan Peninsula",
-
-"Montane grassland South-America",
-"Temperate coniferous forest",
-"Temperate mixed forest",
-"Tropical coniferous forest",
-"Dry-forest Yucatan Peninsula")
+# Practica 1:
+# Repetir para el área de estudio.
+# Comentar el script 
