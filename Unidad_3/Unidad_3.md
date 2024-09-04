@@ -5,7 +5,7 @@
 # Unidad 3
 ## Relación fenotipo - ambiente
 
-#### Conservadurismo filogenético de nicho
+### Conservadurismo filogenético de nicho
 
 Es la tendencia que especies relacionadas presenten nichos similares (fundamental o realizado; [Pearman et al., 2008](https://pubmed.ncbi.nlm.nih.gov/18289716/)).
 
@@ -18,35 +18,6 @@ Conservadurismo de nicho como proceso:
 
 **Artículo de discusión**
 Phylogenetic niche conservatism and the evolutionary basis of ecological speciation [Pyron et al., 2014.](https://onlinelibrary.wiley.com/doi/10.1111/brv.12154)
-
-#### Señal filogenética
-Aquí la mejor explicación que encontré de  [Molina-Venegas 2023.](https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14198) *How to get the most out of phylogenetic imputation withoutabusing it* en Methods in Ecology and Evolution.
-
-The extent to which closely related species share similar values in the traits of interest (Blomberg et al., 2003). 
-
-**What is a sufficiently strong phylogenetic signal for imputing missing values?**\
-Some authors assume ‘strong phylogenetic signal’ even if the traits show evolutionary trajectories that are considerably more labile than expected under Brownian motion (e.g. Liu et al., 2015).\
-Others consider phylogenetic signal is strong only if trait evolution is more conserved than Brownian expectation (CaraDonna & Bain, 2016).\
-The prevailing idea is that phylogenetic signal is ‘strong’ when evolutionary trajectories nearly fit Brownian motion and significantly deviate from a ‘white noise’model (i.e. pure random evolution; Münkemüller et al., 2012).
-
-**How do we measure phylogenetic signal?**\
-Phylogenetic signal is typically evaluated using the Pagels's λ model (Pagel, 1999) and/or the Blomberg's K metric (Blomberget al., 2003).\
- The λ and K are equal to 1 if Brownian motion fits well to the data, and less conserved evolutionary trajectories yield lower values to a minimum of 0 (complete lack of phylogenetic signal).\
-The λ metric has a natural scale between 0 and 1, meaning that it shall not detect evolutionary trajectories that are more conserved than Brownian motion.\
-In contrast, the K metric may successfully capture the latter pattern (K is > 1 if evolutionary trajectories are more conserved than Brownian motion), and therefore both met-rics provide complementary information.\
-**Note:** λ and K have different scales and are not directly comparable unless λ = K = 0 or λ = K = 1). 
-
-**How do we assign the statical significance?**\
-The statistical significance of λ and K is typically evaluated using randomization tests, which often results in significant signals (i.e. p < 0.05 in the randomization tests) but observed λ and K much smaller than 1 (Swenson, 2019). This is because the randomization approach is more akin to asking whether there is more signal than expected from a ‘white noise’ model (Münkemüller et al., 2012), a condition that can be met even with extremely labile traits (Molina-Venegas et al., 2023).
-
-![](figures/brownian_conserved_whiute_noise.png)
-
-**Note:** Brownian motion can lead to higher resemblance between distant relatives in some cases (e.g. sp4–sp13, sp1–sp16). \
-Moreover, even for the strongly conserved trait(a), the premise that species are more similar to their close relatives than to distant ones is not strictly met in all cases (e.g. sp2–sp7 show higher resemblance than sp7–sp8).
-
-Acá otra muy buena explicación por [Liam Revell](http://blog.phytools.org/2012/03/phylogenetic-signal-with-k-and.html) y sus *Phylogenetic Tools for Comparative Biology*.
-
-Para amarrar, un video en YouTube por [DillonTheBiologist.](https://www.google.com/search?q=phylogenetic+signal+explained&client=opera&hs=IXN&sca_esv=d4df4a45296c77b3&ei=XTnVZseyCt25wN4PgNuh0Ao&ved=0ahUKEwiH1bfUsKOIAxXdHNAFHYBtCKoQ4dUDCBA&uact=5&oq=phylogenetic+signal+explained&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXBoeWxvZ2VuZXRpYyBzaWduYWwgZXhwbGFpbmVkMgUQIRigAUivIFCWCVj9HnABeAGQAQCYAb4BoAHOCaoBAzEuObgBA8gBAPgBAZgCC6AC8gnCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICBxAAGIAEGBPCAggQABgTGBYYHsICChAAGBMYFhgeGA_CAgYQABgWGB7CAggQABgWGB4YD8ICCBAAGIAEGKIEmAMAiAYBkAYHkgcEMS4xMKAH9R0&sclient=gws-wiz-serp#fpstate=ive&vld=cid:bdbca419,vid:BtzM7--PK0Q,st:0)
 
 **Phylomorphospace**\
 A phylomorphospace allows us to consider phylogeny, disparity and tempo simultaneously [(Lloyd 2018)](https://onlinelibrary.wiley.com/doi/full/10.1111/pala.12380).\
@@ -61,8 +32,7 @@ Ejemplo con osos:
 Bears into the Niche-Space: Phylogeography and Phyloclimatic Model of the Family Ursidae
 [Luna-Aranguré & Vázquez-Domínguez 2024](https://www.mdpi.com/1424-2818/16/4/223)
 
-
-#### Diversidad filogenética
+### Diversidad filogenética (PD)
 Taxon diversity (TD) is the most quantified measure of diversity, but it gives an incomplete information because the evolutionary history underlying spatial patterns is ignored.\
 
 Higher PD values are given to communities that has more evolutionary divergent taxa and older history, while lower PD values represent assemblages that have taxa with more recent evolutionary history.
@@ -99,8 +69,36 @@ Phylogenetic diversity and the functioning of ecosystems [Srivastava et al., 201
 
 Acá un excelente manual de *Community Phylogenetics in R* por [Pedro Henrique P. Braga & Katherine Hébert](https://pedrohbraga.github.io/CommunityPhylogenetics-Workshop/CommunityPhylogenetics-Workshop.html).
 
+### Señal filogenética
+Aquí la mejor explicación que encontré de  [Molina-Venegas 2023.](https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.14198) *How to get the most out of phylogenetic imputation withoutabusing it* en Methods in Ecology and Evolution.
 
-#### Diversidad y distribución
+The extent to which closely related species share similar values in the traits of interest (Blomberg et al., 2003). 
+
+**What is a sufficiently strong phylogenetic signal for imputing missing values?**\
+Some authors assume ‘strong phylogenetic signal’ even if the traits show evolutionary trajectories that are considerably more labile than expected under Brownian motion (e.g. Liu et al., 2015).\
+Others consider phylogenetic signal is strong only if trait evolution is more conserved than Brownian expectation (CaraDonna & Bain, 2016).\
+The prevailing idea is that phylogenetic signal is ‘strong’ when evolutionary trajectories nearly fit Brownian motion and significantly deviate from a ‘white noise’model (i.e. pure random evolution; Münkemüller et al., 2012).
+
+**How do we measure phylogenetic signal?**\
+Phylogenetic signal is typically evaluated using the Pagels's λ model (Pagel, 1999) and/or the Blomberg's K metric (Blomberget al., 2003).\
+ The λ and K are equal to 1 if Brownian motion fits well to the data, and less conserved evolutionary trajectories yield lower values to a minimum of 0 (complete lack of phylogenetic signal).\
+The λ metric has a natural scale between 0 and 1, meaning that it shall not detect evolutionary trajectories that are more conserved than Brownian motion.\
+In contrast, the K metric may successfully capture the latter pattern (K is > 1 if evolutionary trajectories are more conserved than Brownian motion), and therefore both met-rics provide complementary information.\
+**Note:** λ and K have different scales and are not directly comparable unless λ = K = 0 or λ = K = 1). 
+
+**How do we assign the statical significance?**\
+The statistical significance of λ and K is typically evaluated using randomization tests, which often results in significant signals (i.e. p < 0.05 in the randomization tests) but observed λ and K much smaller than 1 (Swenson, 2019). This is because the randomization approach is more akin to asking whether there is more signal than expected from a ‘white noise’ model (Münkemüller et al., 2012), a condition that can be met even with extremely labile traits (Molina-Venegas et al., 2023).
+
+![](figures/brownian_conserved_whiute_noise.png)
+
+**Note:** Brownian motion can lead to higher resemblance between distant relatives in some cases (e.g. sp4–sp13, sp1–sp16). \
+Moreover, even for the strongly conserved trait(a), the premise that species are more similar to their close relatives than to distant ones is not strictly met in all cases (e.g. sp2–sp7 show higher resemblance than sp7–sp8).
+
+Acá otra muy buena explicación por [Liam Revell](http://blog.phytools.org/2012/03/phylogenetic-signal-with-k-and.html) y sus *Phylogenetic Tools for Comparative Biology*.
+
+Para amarrar, un video en YouTube por [DillonTheBiologist.](https://www.google.com/search?q=phylogenetic+signal+explained&client=opera&hs=IXN&sca_esv=d4df4a45296c77b3&ei=XTnVZseyCt25wN4PgNuh0Ao&ved=0ahUKEwiH1bfUsKOIAxXdHNAFHYBtCKoQ4dUDCBA&uact=5&oq=phylogenetic+signal+explained&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXBoeWxvZ2VuZXRpYyBzaWduYWwgZXhwbGFpbmVkMgUQIRigAUivIFCWCVj9HnABeAGQAQCYAb4BoAHOCaoBAzEuObgBA8gBAPgBAZgCC6AC8gnCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICBxAAGIAEGBPCAggQABgTGBYYHsICChAAGBMYFhgeGA_CAgYQABgWGB7CAggQABgWGB4YD8ICCBAAGIAEGKIEmAMAiAYBkAYHkgcEMS4xMKAH9R0&sclient=gws-wiz-serp#fpstate=ive&vld=cid:bdbca419,vid:BtzM7--PK0Q,st:0)
+
+### Diversidad y distribución
 Colour polymorphism influences species’
 range and extinction risk
 [Takahashi & Noriyuki 2019.](https://royalsocietypublishing.org/doi/10.1098/rsbl.2019.0228#:~:text=Colour%20polymorphism%2C%20which%20is%20defined,in%20extinction%20risk%20%5B2%5D.)
