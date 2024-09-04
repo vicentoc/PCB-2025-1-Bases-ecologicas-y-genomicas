@@ -7,9 +7,9 @@
 
 #### Conservadurismo filogenético de nicho
 
-Es la tendencia que especies relacionadas presenten nichos similares (fundamental o realizado; Pearman et al., 2008).
+Es la tendencia que especies relacionadas presenten nichos similares (fundamental o realizado; [Pearman et al., 2008](https://pubmed.ncbi.nlm.nih.gov/18289716/)).
 
-Conservadurimo de nicho como patrón:
+Conservadurismo de nicho como patrón:\
 ![](figures/conservadurismo_filo.png)
 
 Conservadurismo de nicho como proceso:
@@ -46,15 +46,17 @@ Moreover, even for the strongly conserved trait(a), the premise that species are
 
 Acá otra muy buena explicación por [Liam Revell](http://blog.phytools.org/2012/03/phylogenetic-signal-with-k-and.html) y sus *Phylogenetic Tools for Comparative Biology*.
 
-Para amarrar un video en YouTube por [DillonTheBiologist.](https://www.google.com/search?q=phylogenetic+signal+explained&client=opera&hs=IXN&sca_esv=d4df4a45296c77b3&ei=XTnVZseyCt25wN4PgNuh0Ao&ved=0ahUKEwiH1bfUsKOIAxXdHNAFHYBtCKoQ4dUDCBA&uact=5&oq=phylogenetic+signal+explained&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXBoeWxvZ2VuZXRpYyBzaWduYWwgZXhwbGFpbmVkMgUQIRigAUivIFCWCVj9HnABeAGQAQCYAb4BoAHOCaoBAzEuObgBA8gBAPgBAZgCC6AC8gnCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICBxAAGIAEGBPCAggQABgTGBYYHsICChAAGBMYFhgeGA_CAgYQABgWGB7CAggQABgWGB4YD8ICCBAAGIAEGKIEmAMAiAYBkAYHkgcEMS4xMKAH9R0&sclient=gws-wiz-serp#fpstate=ive&vld=cid:bdbca419,vid:BtzM7--PK0Q,st:0)
+Para amarrar, un video en YouTube por [DillonTheBiologist.](https://www.google.com/search?q=phylogenetic+signal+explained&client=opera&hs=IXN&sca_esv=d4df4a45296c77b3&ei=XTnVZseyCt25wN4PgNuh0Ao&ved=0ahUKEwiH1bfUsKOIAxXdHNAFHYBtCKoQ4dUDCBA&uact=5&oq=phylogenetic+signal+explained&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXBoeWxvZ2VuZXRpYyBzaWduYWwgZXhwbGFpbmVkMgUQIRigAUivIFCWCVj9HnABeAGQAQCYAb4BoAHOCaoBAzEuObgBA8gBAPgBAZgCC6AC8gnCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICBxAAGIAEGBPCAggQABgTGBYYHsICChAAGBMYFhgeGA_CAgYQABgWGB7CAggQABgWGB4YD8ICCBAAGIAEGKIEmAMAiAYBkAYHkgcEMS4xMKAH9R0&sclient=gws-wiz-serp#fpstate=ive&vld=cid:bdbca419,vid:BtzM7--PK0Q,st:0)
 
 **Phylomorphospace**\
 A phylomorphospace allows us to consider phylogeny, disparity and tempo simultaneously [(Lloyd 2018)](https://onlinelibrary.wiley.com/doi/full/10.1111/pala.12380).\
+
 Flujo de análisis:
 ![](figures/linea_trabajo.png)
 
 Ejemplo con osos:
 ![](figures/osos_filomorphospace.png)
+
 **Artículo de discusión:**\
 Bears into the Niche-Space: Phylogeography and Phyloclimatic Model of the Family Ursidae
 [Luna-Aranguré & Vázquez-Domínguez 2024](https://www.mdpi.com/1424-2818/16/4/223)
