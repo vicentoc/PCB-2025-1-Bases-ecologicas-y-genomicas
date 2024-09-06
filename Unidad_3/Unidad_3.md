@@ -16,10 +16,10 @@ Conservadurismo de nicho como proceso:
 
 ![](figures/conservadurismo.png)
 
-**Artículo de discusión**
+**Artículo de discusión:**\
 Phylogenetic niche conservatism and the evolutionary basis of ecological speciation [Pyron et al., 2014.](https://onlinelibrary.wiley.com/doi/10.1111/brv.12154)
 
-**Phylomorphospace**\
+#### Aplicación en el filo-morfo espacio (Phylomorphospace)
 A phylomorphospace allows us to consider phylogeny, disparity and tempo simultaneously [(Lloyd 2018)](https://onlinelibrary.wiley.com/doi/full/10.1111/pala.12380).\
 
 Flujo de análisis:
@@ -74,25 +74,28 @@ Aquí la mejor explicación que encontré de  [Molina-Venegas 2023.](https://bes
 
 The extent to which closely related species share similar values in the traits of interest (Blomberg et al., 2003). 
 
-**What is a sufficiently strong phylogenetic signal for imputing missing values?**\
+**What is a sufficiently strong phylogenetic signal?**\
 Some authors assume ‘strong phylogenetic signal’ even if the traits show evolutionary trajectories that are considerably more labile than expected under Brownian motion (e.g. Liu et al., 2015).\
 Others consider phylogenetic signal is strong only if trait evolution is more conserved than Brownian expectation (CaraDonna & Bain, 2016).\
 The prevailing idea is that phylogenetic signal is ‘strong’ when evolutionary trajectories nearly fit Brownian motion and significantly deviate from a ‘white noise’model (i.e. pure random evolution; Münkemüller et al., 2012).
 
 **How do we measure phylogenetic signal?**\
 Phylogenetic signal is typically evaluated using the Pagels's λ model (Pagel, 1999) and/or the Blomberg's K metric (Blomberget al., 2003).\
- The λ and K are equal to 1 if Brownian motion fits well to the data, and less conserved evolutionary trajectories yield lower values to a minimum of 0 (complete lack of phylogenetic signal).\
-The λ metric has a natural scale between 0 and 1, meaning that it shall not detect evolutionary trajectories that are more conserved than Brownian motion.\
-In contrast, the K metric may successfully capture the latter pattern (K is > 1 if evolutionary trajectories are more conserved than Brownian motion), and therefore both met-rics provide complementary information.\
-**Note:** λ and K have different scales and are not directly comparable unless λ = K = 0 or λ = K = 1). 
+ The λ is equal to 1 if Brownian motion fits well to the data, and less conserved evolutionary trajectories yield lower values to a minimum of 0 (complete lack of phylogenetic signal).
 
-**How do we assign the statical significance?**\
-The statistical significance of λ and K is typically evaluated using randomization tests, which often results in significant signals (i.e. p < 0.05 in the randomization tests) but observed λ and K much smaller than 1 (Swenson, 2019). This is because the randomization approach is more akin to asking whether there is more signal than expected from a ‘white noise’ model (Münkemüller et al., 2012), a condition that can be met even with extremely labile traits (Molina-Venegas et al., 2023).
+![](figures/lambda.png)
+
+Blomberg's K **is > 1** if evolutionary trajectories are more conserved than Brownian motion.
 
 ![](figures/brownian_conserved_whiute_noise.png)
 
-**Note:** Brownian motion can lead to higher resemblance between distant relatives in some cases (e.g. sp4–sp13, sp1–sp16). \
-Moreover, even for the strongly conserved trait(a), the premise that species are more similar to their close relatives than to distant ones is not strictly met in all cases (e.g. sp2–sp7 show higher resemblance than sp7–sp8).
+Hence both metrics provide complementary information.
+
+**Note:** λ and K have different scales and are not directly comparable unless λ = K = 0 or λ = K = 1). 
+
+**How do we assign the statical significance?**\
+The statistical significance of λ and K is typically evaluated using randomization tests, which often results in significant signals (i.e. p < 0.05 in the randomization tests) but observed λ and K much smaller than 1 (Swenson, 2019). 
+This is because the randomization approach is more akin to asking whether there is more signal than expected from a ‘white noise’ model (Münkemüller et al., 2012), a condition that can be met even with extremely labile traits (Molina-Venegas et al., 2023).
 
 Acá otra muy buena explicación por [Liam Revell](http://blog.phytools.org/2012/03/phylogenetic-signal-with-k-and.html) y sus *Phylogenetic Tools for Comparative Biology*.
 
