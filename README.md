@@ -7,7 +7,7 @@
 **Este curso es impartido por los profesores:** \
 Dr. Luis E. Sánchez Ramos \
 Dr. Alexander Llanes Quevedo \
-M en C. Vicente J. Castillo Chora 
+Dr. Vicente J. Castillo Chora 
 
 **Áreas del conocimiento:** \
 Biología evolutiva \
@@ -23,10 +23,7 @@ Al final se curso se pretende que el alumno esté familiarizado con enfoques nov
 
 - Ecología de comunidades
 - Ecología funcional
-- Análisis filogenéticos
-- Variación genética
-- Filogenómica
-- Asociaciones Genotipo - Ambiente
-
+- Conceptos de nicho
+- Análisis filogenómicos
 
 
